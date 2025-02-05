@@ -23,17 +23,17 @@ builder.Services.AddCors(options =>
     });
 });
 var app = builder.Build();
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 // Configure the HTTP request pipeline.
 // Use CORS
 app.UseCors("AllowAll");
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "MinimalAPI Server is running!");
 
 app.MapGet("/items", async (ToDoDbContext db) =>
     await db.Items.ToListAsync());
