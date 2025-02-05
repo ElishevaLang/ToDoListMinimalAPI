@@ -11,3 +11,5 @@ public partial class Item
 
     public bool? IsComplete { get; set; }
 }
+  /* "ToDoDB": "server=localhost;user=root;password=1234;database=ToDoDB"
+    */

@@ -42,6 +42,7 @@ app.MapPost("/items", async (ToDoDbContext db, Item newItem) =>
 {
     db.Items.Add(newItem);
     await db.SaveChangesAsync();
+    System.Console.WriteLine("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
     return Results.Created($"/items/{newItem.Id}", newItem);
 });
 
